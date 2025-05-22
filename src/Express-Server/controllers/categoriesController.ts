@@ -14,12 +14,9 @@ const postCategory = async (req: Request, res: Response) => {
         const lables = JSON.parse(req.body.labels);
         const files = req.files as Express.Multer.File[];
         console.log(lables.length, files, "sdbhbsbjkbkd");
-
-
         if (!Array.isArray(lables) || lables.length !== files.length) {
             return res.status(400).json({ error: "Labels and Images count mismatch" })
         }
-
         const createdCategories = await Promise.all(
             lables.map((label: string, index: number) =>
                 Categories.create({
