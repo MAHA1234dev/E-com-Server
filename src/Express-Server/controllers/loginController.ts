@@ -19,7 +19,7 @@ const login = async (req: Request, res: Response) => {
             return res.status(400).json({ error: "Invalid mobile number format" })
         } else if (match) {
             const token = jwt.sign({ userId: userData._id }, JWT_SECRET, { expiresIn: '1h' });
-            return res.status(201).json({ token, success: true, message: "Logged in successfully", });
+            return res.status(201).json({ token, success: true, message: "Logged in successfully" });
         } else {
             return res.status(400).json({ success: false, message: "Please register" })
         }

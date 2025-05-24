@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/Express-Server/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only src/Express-Server/server.ts",
+    "start": "node dist/Express-Server/server.js",
+    "build": "tsc",
+    "lint": "eslint ./src --ext .ts",
+    "test": "echo \"No tests yet\" && exit 0"
   },
   "keywords": [],
   "author": "",
