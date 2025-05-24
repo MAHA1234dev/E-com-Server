@@ -7,8 +7,8 @@
     "dev": "ts-node-dev --respawn --transpile-only src/Express-Server/server.ts",
     "start": "node dist/Express-Server/server.js",
     "build": "tsc",
-    "lint": "eslint ./src --ext .ts",
-    "test": "echo \"No tests yet\" && exit 0"
+    "test": "echo \"No tests yet\" && exit 0",
+    "lint": "eslint 'src/**/*.{ts,tsx,js,jsx}'"
   },
   "keywords": [],
   "author": "",
