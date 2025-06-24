@@ -3,3 +3,4 @@ dist/
 *.env
 *.lock.json*
 *.lock
+src/Express-Server/config/*.json
